@@ -1,0 +1,18 @@
+/home/stud17/.conda/envs/mlts/lib/python3.6/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))
+Traceback (most recent call last):
+  File "train_single_step.py", line 218, in <module>
+    val_acc, val_rae, val_corr, test_acc, test_rae, test_corr = main()
+  File "train_single_step.py", line 178, in main
+    train_loss = train(Data, Data.train[0], Data.train[1], model, criterion, optim, args.batch_size)
+  File "train_single_step.py", line 79, in train
+    output = model(tx,id)
+  File "/home/stud17/.conda/envs/mlts/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/stud17/MLTS/mlts-mtgnn/net.py", line 103, in forward
+    adp = self.gc(idx)
+  File "/home/stud17/.conda/envs/mlts/lib/python3.6/site-packages/torch/nn/modules/module.py", line 547, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/stud17/MLTS/mlts-mtgnn/layer.py", line 187, in forward
+    s1,t1 = (adj + torch.rand_like(adj)*0.01).topk(self.k,1)
+RuntimeError: invalid argument 5: k not in range for dimension at /opt/conda/conda-bld/pytorch_1565272279342/work/aten/src/THC/generic/THCTensorTopK.cu:21

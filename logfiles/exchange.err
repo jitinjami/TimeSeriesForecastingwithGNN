@@ -1,0 +1,2 @@
+/home/stud17/.conda/envs/mlts/lib/python3.6/site-packages/torch/nn/_reduction.py:43: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  warnings.warn(warning.format(ret))

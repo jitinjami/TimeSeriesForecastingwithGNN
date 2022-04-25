@@ -1,0 +1,371 @@
+Namespace(L1Loss=True, batch_size=4, buildA_true=True, clip=5, conv_channels=16, data='./data/exchange_rate.txt', device='cuda:0', dilation_exponential=2, dropout=0.3, end_channels=64, epochs=30, gcn_depth=2, gcn_true=True, horizon=3, in_dim=1, layers=5, log_interval=2000, lr=0.0001, node_dim=40, normalize=2, num_nodes=8, num_split=1, optim='adam', propalpha=0.05, residual_channels=16, save='./models/model-exchange-3.pt', seq_in_len=168, seq_out_len=1, skip_channels=32, step_size=100, subgraph_size=8, tanhalpha=3, weight_decay=1e-05)
+The recpetive field size is 187
+Number of model parameters is 337345
+begin training
+iter:  0 | loss: 0.765
+iter:100 | loss: 0.036
+iter:200 | loss: 0.028
+iter:300 | loss: 0.033
+iter:400 | loss: 0.029
+iter:500 | loss: 0.021
+iter:600 | loss: 0.020
+iter:700 | loss: 0.016
+iter:800 | loss: 0.017
+iter:900 | loss: 0.022
+iter:1000 | loss: 0.019
+| end of epoch   1 | time: 80.60s | train_loss 0.0333 | valid rse 0.0765 | valid rae 0.0656 | valid corr  0.9352
+iter:  0 | loss: 0.018
+iter:100 | loss: 0.023
+iter:200 | loss: 0.020
+iter:300 | loss: 0.022
+iter:400 | loss: 0.017
+iter:500 | loss: 0.018
+iter:600 | loss: 0.018
+iter:700 | loss: 0.018
+iter:800 | loss: 0.015
+iter:900 | loss: 0.018
+iter:1000 | loss: 0.016
+| end of epoch   2 | time: 78.30s | train_loss 0.0179 | valid rse 0.0566 | valid rae 0.0469 | valid corr  0.9592
+iter:  0 | loss: 0.018
+iter:100 | loss: 0.020
+iter:200 | loss: 0.012
+iter:300 | loss: 0.014
+iter:400 | loss: 0.015
+iter:500 | loss: 0.012
+iter:600 | loss: 0.013
+iter:700 | loss: 0.015
+iter:800 | loss: 0.011
+iter:900 | loss: 0.011
+iter:1000 | loss: 0.016
+| end of epoch   3 | time: 78.35s | train_loss 0.0145 | valid rse 0.0493 | valid rae 0.0404 | valid corr  0.9683
+iter:  0 | loss: 0.012
+iter:100 | loss: 0.009
+iter:200 | loss: 0.018
+iter:300 | loss: 0.010
+iter:400 | loss: 0.016
+iter:500 | loss: 0.024
+iter:600 | loss: 0.020
+iter:700 | loss: 0.007
+iter:800 | loss: 0.021
+iter:900 | loss: 0.014
+iter:1000 | loss: 0.010
+| end of epoch   4 | time: 78.34s | train_loss 0.0129 | valid rse 0.0476 | valid rae 0.0426 | valid corr  0.9746
+iter:  0 | loss: 0.017
+iter:100 | loss: 0.013
+iter:200 | loss: 0.013
+iter:300 | loss: 0.017
+iter:400 | loss: 0.017
+iter:500 | loss: 0.010
+iter:600 | loss: 0.011
+iter:700 | loss: 0.010
+iter:800 | loss: 0.010
+iter:900 | loss: 0.013
+iter:1000 | loss: 0.009
+| end of epoch   5 | time: 78.49s | train_loss 0.0117 | valid rse 0.0402 | valid rae 0.0342 | valid corr  0.9791
+test rse 0.0276 | test rae 0.0233 | test corr 0.9711
+iter:  0 | loss: 0.008
+iter:100 | loss: 0.010
+iter:200 | loss: 0.008
+iter:300 | loss: 0.009
+iter:400 | loss: 0.013
+iter:500 | loss: 0.013
+iter:600 | loss: 0.011
+iter:700 | loss: 0.011
+iter:800 | loss: 0.008
+iter:900 | loss: 0.016
+iter:1000 | loss: 0.014
+| end of epoch   6 | time: 78.41s | train_loss 0.0109 | valid rse 0.0433 | valid rae 0.0397 | valid corr  0.9813
+iter:  0 | loss: 0.009
+iter:100 | loss: 0.012
+iter:200 | loss: 0.011
+iter:300 | loss: 0.014
+iter:400 | loss: 0.008
+iter:500 | loss: 0.017
+iter:600 | loss: 0.007
+iter:700 | loss: 0.018
+iter:800 | loss: 0.012
+iter:900 | loss: 0.010
+iter:1000 | loss: 0.012
+| end of epoch   7 | time: 78.43s | train_loss 0.0105 | valid rse 0.0388 | valid rae 0.0347 | valid corr  0.9824
+iter:  0 | loss: 0.009
+iter:100 | loss: 0.008
+iter:200 | loss: 0.007
+iter:300 | loss: 0.009
+iter:400 | loss: 0.008
+iter:500 | loss: 0.014
+iter:600 | loss: 0.011
+iter:700 | loss: 0.010
+iter:800 | loss: 0.010
+iter:900 | loss: 0.008
+iter:1000 | loss: 0.008
+| end of epoch   8 | time: 78.46s | train_loss 0.0095 | valid rse 0.0345 | valid rae 0.0295 | valid corr  0.9849
+iter:  0 | loss: 0.006
+iter:100 | loss: 0.009
+iter:200 | loss: 0.008
+iter:300 | loss: 0.008
+iter:400 | loss: 0.019
+iter:500 | loss: 0.012
+iter:600 | loss: 0.011
+iter:700 | loss: 0.019
+iter:800 | loss: 0.010
+iter:900 | loss: 0.008
+iter:1000 | loss: 0.009
+| end of epoch   9 | time: 78.72s | train_loss 0.0097 | valid rse 0.0432 | valid rae 0.0371 | valid corr  0.9860
+iter:  0 | loss: 0.013
+iter:100 | loss: 0.009
+iter:200 | loss: 0.009
+iter:300 | loss: 0.008
+iter:400 | loss: 0.007
+iter:500 | loss: 0.010
+iter:600 | loss: 0.005
+iter:700 | loss: 0.006
+iter:800 | loss: 0.012
+iter:900 | loss: 0.011
+iter:1000 | loss: 0.008
+| end of epoch  10 | time: 78.55s | train_loss 0.0087 | valid rse 0.0333 | valid rae 0.0292 | valid corr  0.9873
+test rse 0.0239 | test rae 0.0203 | test corr 0.9776
+iter:  0 | loss: 0.008
+iter:100 | loss: 0.017
+iter:200 | loss: 0.008
+iter:300 | loss: 0.009
+iter:400 | loss: 0.011
+iter:500 | loss: 0.005
+iter:600 | loss: 0.005
+iter:700 | loss: 0.010
+iter:800 | loss: 0.006
+iter:900 | loss: 0.012
+iter:1000 | loss: 0.007
+| end of epoch  11 | time: 77.82s | train_loss 0.0086 | valid rse 0.0408 | valid rae 0.0356 | valid corr  0.9878
+iter:  0 | loss: 0.009
+iter:100 | loss: 0.007
+iter:200 | loss: 0.013
+iter:300 | loss: 0.005
+iter:400 | loss: 0.006
+iter:500 | loss: 0.007
+iter:600 | loss: 0.005
+iter:700 | loss: 0.009
+iter:800 | loss: 0.007
+iter:900 | loss: 0.008
+iter:1000 | loss: 0.010
+| end of epoch  12 | time: 77.75s | train_loss 0.0082 | valid rse 0.0422 | valid rae 0.0378 | valid corr  0.9885
+iter:  0 | loss: 0.013
+iter:100 | loss: 0.010
+iter:200 | loss: 0.006
+iter:300 | loss: 0.013
+iter:400 | loss: 0.006
+iter:500 | loss: 0.007
+iter:600 | loss: 0.008
+iter:700 | loss: 0.007
+iter:800 | loss: 0.009
+iter:900 | loss: 0.007
+iter:1000 | loss: 0.009
+| end of epoch  13 | time: 77.79s | train_loss 0.0081 | valid rse 0.0304 | valid rae 0.0261 | valid corr  0.9889
+iter:  0 | loss: 0.008
+iter:100 | loss: 0.009
+iter:200 | loss: 0.010
+iter:300 | loss: 0.008
+iter:400 | loss: 0.007
+iter:500 | loss: 0.006
+iter:600 | loss: 0.006
+iter:700 | loss: 0.010
+iter:800 | loss: 0.005
+iter:900 | loss: 0.009
+iter:1000 | loss: 0.006
+| end of epoch  14 | time: 77.76s | train_loss 0.0079 | valid rse 0.0332 | valid rae 0.0299 | valid corr  0.9891
+iter:  0 | loss: 0.008
+iter:100 | loss: 0.009
+iter:200 | loss: 0.011
+iter:300 | loss: 0.008
+iter:400 | loss: 0.006
+iter:500 | loss: 0.007
+iter:600 | loss: 0.008
+iter:700 | loss: 0.009
+iter:800 | loss: 0.005
+iter:900 | loss: 0.006
+iter:1000 | loss: 0.008
+| end of epoch  15 | time: 77.76s | train_loss 0.0077 | valid rse 0.0280 | valid rae 0.0229 | valid corr  0.9893
+test rse 0.0198 | test rae 0.0158 | test corr 0.9786
+iter:  0 | loss: 0.007
+iter:100 | loss: 0.016
+iter:200 | loss: 0.006
+iter:300 | loss: 0.009
+iter:400 | loss: 0.007
+iter:500 | loss: 0.007
+iter:600 | loss: 0.007
+iter:700 | loss: 0.006
+iter:800 | loss: 0.006
+iter:900 | loss: 0.007
+iter:1000 | loss: 0.008
+| end of epoch  16 | time: 77.82s | train_loss 0.0074 | valid rse 0.0388 | valid rae 0.0371 | valid corr  0.9895
+iter:  0 | loss: 0.007
+iter:100 | loss: 0.006
+iter:200 | loss: 0.006
+iter:300 | loss: 0.006
+iter:400 | loss: 0.005
+iter:500 | loss: 0.004
+iter:600 | loss: 0.010
+iter:700 | loss: 0.008
+iter:800 | loss: 0.007
+iter:900 | loss: 0.012
+iter:1000 | loss: 0.009
+| end of epoch  17 | time: 77.80s | train_loss 0.0073 | valid rse 0.0295 | valid rae 0.0236 | valid corr  0.9897
+iter:  0 | loss: 0.007
+iter:100 | loss: 0.011
+iter:200 | loss: 0.006
+iter:300 | loss: 0.008
+iter:400 | loss: 0.006
+iter:500 | loss: 0.005
+iter:600 | loss: 0.009
+iter:700 | loss: 0.005
+iter:800 | loss: 0.006
+iter:900 | loss: 0.005
+iter:1000 | loss: 0.006
+| end of epoch  18 | time: 77.75s | train_loss 0.0074 | valid rse 0.0333 | valid rae 0.0303 | valid corr  0.9900
+iter:  0 | loss: 0.008
+iter:100 | loss: 0.004
+iter:200 | loss: 0.008
+iter:300 | loss: 0.006
+iter:400 | loss: 0.005
+iter:500 | loss: 0.006
+iter:600 | loss: 0.010
+iter:700 | loss: 0.006
+iter:800 | loss: 0.007
+iter:900 | loss: 0.008
+iter:1000 | loss: 0.006
+| end of epoch  19 | time: 77.78s | train_loss 0.0071 | valid rse 0.0500 | valid rae 0.0481 | valid corr  0.9901
+iter:  0 | loss: 0.012
+iter:100 | loss: 0.012
+iter:200 | loss: 0.006
+iter:300 | loss: 0.006
+iter:400 | loss: 0.010
+iter:500 | loss: 0.007
+iter:600 | loss: 0.010
+iter:700 | loss: 0.004
+iter:800 | loss: 0.004
+iter:900 | loss: 0.007
+iter:1000 | loss: 0.004
+| end of epoch  20 | time: 77.77s | train_loss 0.0070 | valid rse 0.0270 | valid rae 0.0215 | valid corr  0.9902
+test rse 0.0192 | test rae 0.0151 | test corr 0.9797
+iter:  0 | loss: 0.006
+iter:100 | loss: 0.007
+iter:200 | loss: 0.010
+iter:300 | loss: 0.007
+iter:400 | loss: 0.008
+iter:500 | loss: 0.006
+iter:600 | loss: 0.005
+iter:700 | loss: 0.007
+iter:800 | loss: 0.005
+iter:900 | loss: 0.006
+iter:1000 | loss: 0.006
+| end of epoch  21 | time: 77.75s | train_loss 0.0068 | valid rse 0.0370 | valid rae 0.0320 | valid corr  0.9900
+iter:  0 | loss: 0.007
+iter:100 | loss: 0.009
+iter:200 | loss: 0.017
+iter:300 | loss: 0.017
+iter:400 | loss: 0.007
+iter:500 | loss: 0.005
+iter:600 | loss: 0.005
+iter:700 | loss: 0.007
+iter:800 | loss: 0.006
+iter:900 | loss: 0.012
+iter:1000 | loss: 0.007
+| end of epoch  22 | time: 77.79s | train_loss 0.0069 | valid rse 0.0266 | valid rae 0.0213 | valid corr  0.9905
+iter:  0 | loss: 0.006
+iter:100 | loss: 0.008
+iter:200 | loss: 0.005
+iter:300 | loss: 0.004
+iter:400 | loss: 0.007
+iter:500 | loss: 0.020
+iter:600 | loss: 0.005
+iter:700 | loss: 0.007
+iter:800 | loss: 0.004
+iter:900 | loss: 0.007
+iter:1000 | loss: 0.006
+| end of epoch  23 | time: 77.74s | train_loss 0.0068 | valid rse 0.0334 | valid rae 0.0306 | valid corr  0.9904
+iter:  0 | loss: 0.006
+iter:100 | loss: 0.008
+iter:200 | loss: 0.008
+iter:300 | loss: 0.007
+iter:400 | loss: 0.007
+iter:500 | loss: 0.005
+iter:600 | loss: 0.009
+iter:700 | loss: 0.007
+iter:800 | loss: 0.010
+iter:900 | loss: 0.005
+iter:1000 | loss: 0.005
+| end of epoch  24 | time: 77.74s | train_loss 0.0067 | valid rse 0.0320 | valid rae 0.0289 | valid corr  0.9906
+iter:  0 | loss: 0.008
+iter:100 | loss: 0.009
+iter:200 | loss: 0.008
+iter:300 | loss: 0.007
+iter:400 | loss: 0.006
+iter:500 | loss: 0.008
+iter:600 | loss: 0.006
+iter:700 | loss: 0.006
+iter:800 | loss: 0.006
+iter:900 | loss: 0.006
+iter:1000 | loss: 0.006
+| end of epoch  25 | time: 77.75s | train_loss 0.0068 | valid rse 0.0336 | valid rae 0.0284 | valid corr  0.9905
+test rse 0.0281 | test rae 0.0264 | test corr 0.9799
+iter:  0 | loss: 0.006
+iter:100 | loss: 0.004
+iter:200 | loss: 0.005
+iter:300 | loss: 0.007
+iter:400 | loss: 0.011
+iter:500 | loss: 0.005
+iter:600 | loss: 0.007
+iter:700 | loss: 0.006
+iter:800 | loss: 0.007
+iter:900 | loss: 0.006
+iter:1000 | loss: 0.007
+| end of epoch  26 | time: 77.76s | train_loss 0.0065 | valid rse 0.0282 | valid rae 0.0222 | valid corr  0.9905
+iter:  0 | loss: 0.006
+iter:100 | loss: 0.006
+iter:200 | loss: 0.007
+iter:300 | loss: 0.009
+iter:400 | loss: 0.006
+iter:500 | loss: 0.006
+iter:600 | loss: 0.006
+iter:700 | loss: 0.005
+iter:800 | loss: 0.005
+iter:900 | loss: 0.008
+iter:1000 | loss: 0.009
+| end of epoch  27 | time: 77.75s | train_loss 0.0066 | valid rse 0.0434 | valid rae 0.0408 | valid corr  0.9906
+iter:  0 | loss: 0.012
+iter:100 | loss: 0.009
+iter:200 | loss: 0.004
+iter:300 | loss: 0.006
+iter:400 | loss: 0.005
+iter:500 | loss: 0.005
+iter:600 | loss: 0.006
+iter:700 | loss: 0.005
+iter:800 | loss: 0.005
+iter:900 | loss: 0.008
+iter:1000 | loss: 0.010
+| end of epoch  28 | time: 77.74s | train_loss 0.0066 | valid rse 0.0293 | valid rae 0.0254 | valid corr  0.9907
+iter:  0 | loss: 0.006
+iter:100 | loss: 0.006
+iter:200 | loss: 0.005
+iter:300 | loss: 0.007
+iter:400 | loss: 0.006
+iter:500 | loss: 0.005
+iter:600 | loss: 0.005
+iter:700 | loss: 0.009
+iter:800 | loss: 0.007
+iter:900 | loss: 0.006
+iter:1000 | loss: 0.005
+| end of epoch  29 | time: 77.73s | train_loss 0.0063 | valid rse 0.0264 | valid rae 0.0211 | valid corr  0.9906
+iter:  0 | loss: 0.011
+iter:100 | loss: 0.003
+iter:200 | loss: 0.003
+iter:300 | loss: 0.005
+iter:400 | loss: 0.005
+iter:500 | loss: 0.009
+iter:600 | loss: 0.005
+iter:700 | loss: 0.005
+iter:800 | loss: 0.009
+iter:900 | loss: 0.010
+iter:1000 | loss: 0.008
+| end of epoch  30 | time: 77.73s | train_loss 0.0063 | valid rse 0.0284 | valid rae 0.0243 | valid corr  0.9908
+test rse 0.0202 | test rae 0.0170 | test corr 0.9799
+final test rse 0.0184 | test rae 0.0143 | test corr 0.9797

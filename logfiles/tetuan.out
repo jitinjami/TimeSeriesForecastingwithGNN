@@ -1,0 +1,4 @@
+Namespace(L1Loss=True, batch_size=4, buildA_true=True, clip=5, conv_channels=16, data='./data/TetuanCityPowerConsumption.txt', device='cuda:0', dilation_exponential=2, dropout=0.3, end_channels=64, epochs=30, gcn_depth=2, gcn_true=True, horizon=3, in_dim=1, layers=5, log_interval=2000, lr=0.0001, node_dim=40, normalize=2, num_nodes=8, num_split=1, optim='adam', propalpha=0.05, residual_channels=16, save='./models/model-tetuan.pt', seq_in_len=168, seq_out_len=1, skip_channels=32, step_size=100, subgraph_size=20, tanhalpha=3, weight_decay=1e-05)
+The recpetive field size is 187
+Number of model parameters is 337345
+begin training
