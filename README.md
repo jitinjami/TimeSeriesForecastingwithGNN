@@ -1,4 +1,6 @@
 # MTGNN
+Original implmenetation by [nnZhan](https://github.com/nnzhan): [https://github.com/nnzhan/MTGNN](https://github.com/nnzhan/MTGNN)
+
 This is a PyTorch implementation of the paper: [Connecting the Dots: Multivariate Time Series Forecasting with Graph Neural Networks](https://arxiv.org/abs/2005.11650). 
 
 ## Requirements
